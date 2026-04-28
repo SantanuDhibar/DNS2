@@ -1,8 +1,8 @@
-# DNS-AGN By KHALED AGN ( ENGLISH )
+# DNS2 By KHALED AGN ( ENGLISH )
 ```
-* DNS-AGN SLOWDNS SCRIPT
+* DNS2 SLOWDNS SCRIPT
 ```
-![logo](https://raw.githubusercontent.com/SantanuDhibar/DNS-AGN/main/AGN-DNS.png)
+![logo](https://raw.githubusercontent.com/SantanuDhibar/DNS2/main/AGN-DNS.png)
 
 ```
 THIS IS A SCRIPT FOR AUTO INSTALLATION OF SLOWDNS (DNSTT SERVER) WITH:

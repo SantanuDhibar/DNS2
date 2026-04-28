@@ -108,7 +108,7 @@ Option9 () {
 
 Option10 () {
     clear
-    wget https://raw.githubusercontent.com/SantanuDhibar/DNS-AGN/main/update
+    wget https://raw.githubusercontent.com/SantanuDhibar/DNS2/main/update
     chmod +x update
     bash update
 }
