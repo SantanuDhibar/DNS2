@@ -27,7 +27,7 @@ echo -e "\033[0;36m#===================================================#\033[m"
     echo -e "\033[0;36m[11]\033[m | Remove Script"
     echo -e "\033[0;36m[00]\033[m | EXIT"
     echo ""
-    echo -ne "\033[0;36mWhat do you want to do?:\0033[m " && read option
+    echo -ne "\033[0;36mWhat do you want to do?:\033[0m " && read option
     case $option in
     1) Option1 ;;
     2) Option2 ;;
@@ -41,7 +41,7 @@ echo -e "\033[0;36m#===================================================#\033[m"
     10) Option10 ;;
     11) Option11 ;;
     0) Sair ;;
-    *) "Invalid option" ; echo ; slowdns ;;
+    *) echo "Invalid option" ; echo ; slowdns ;;
     esac
     }
 
@@ -73,11 +73,25 @@ Option5 () {
 
 Option6 () {
     clear
+    if [ ! -f /etc/slowdns/startdns ]; then
+        echo -e "\033[1;31mERROR: SlowDNS is not configured yet.\033[0m"
+        echo -e "Please install a mode first (Options 1-4) before starting SlowDNS."
+        sleep 3
+        slowdns
+        return
+    fi
     bash /etc/slowdns/startdns
 }
 
 Option7 () {
     clear
+    if [ ! -f /etc/slowdns/restartdns ]; then
+        echo -e "\033[1;31mERROR: SlowDNS is not configured yet.\033[0m"
+        echo -e "Please install a mode first (Options 1-4) before restarting SlowDNS."
+        sleep 3
+        slowdns
+        return
+    fi
     bash /etc/slowdns/restartdns
 }
 
